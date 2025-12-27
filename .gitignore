@@ -49,3 +49,6 @@ release.properties
 *.swp
 *.bak
 
+githubToken.txt
+*.token
+*.secret
