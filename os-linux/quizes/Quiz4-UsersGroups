@@ -1,0 +1,160 @@
+
+Linux User Management Quiz
+Topics: Local users and groups, sudo, user files, basic commands
+
+Part A: Multiple Choice
+1. Which file stores encrypted user passwords on a modern Linux system?
+    a) /etc/passwd
+    b) /etc/shadow
+    c) /etc/group
+    d) /etc/sudoers
+2. What command shows your current username?
+    a) id
+    b) whoami
+    c) groups
+    d) passwd
+3. Which command is used to switch to another user?
+    a) sudo
+    b) su
+    c) switch
+    d) login
+4. The primary group of a user is:
+    a) The group with GID 0
+    b) The group defined in /etc/passwd
+    c) Always root  
+    d) Any temporary group
+5. Which file controls sudo access?
+    a) /etc/passwd
+    b) /etc/shadow
+    c) /etc/sudoers
+    d) /etc/group
+
+--------------------
+Part B: True / False
+6. The passwd command can change another user's password if run with sudo.
+7. Users can belong to multiple secondary groups.
+8. Deleting a user with userdel automatically deletes their home directory.
+9. Service users are typically used for login purposes.
+10. The groups command shows both primary and secondary groups of a user.
+
+--------------------
+Part C: Practical / Command Questions11. Add a new user called student with home directory /home/student.
+12. Change the password for user professor.
+13. Add user student to group developers.
+14. List all users on the system using a file command.
+15. Show which groups the current user belongs to.
+
+------------------------------------------------------------
+Answer Key
+1. b) /etc/shadow
+2. b) whoami
+3. b) su
+4. b) The group defined in /etc/passwd
+5. c) /etc/sudoers
+6. True
+7. True
+8. False (use userdel -r to remove home directory)
+9. False
+10. True
+11. sudo useradd -m -d /home/student student
+12. sudo passwd professor
+13. sudo usermod -aG developers student
+14. cat /etc/passwd
+15. groups or id
+------------------------------------------------------------
+Answers and Explanations
+Part A: Multiple Choice
+
+1.
+Which file stores encrypted user passwords on a modern Linux system?
+Answer: b) /etc/shadow
+Explanation: /etc/passwd stores user info (username, UID, GID, home), but passwords are in /etc/shadow for security.
+
+2.
+What command shows your current username?
+Answer: b) whoami
+Explanation: whoami prints the effective username of the current session.
+
+3.
+Which command is used to switch to another user?
+Answer: b) su
+Explanation: su username switches the current user session to another user.
+
+4.
+The primary group of a user is:
+Answer: b) The group defined in the user’s entry in /etc/passwd
+Explanation: Each user has one primary group (GID in /etc/passwd) and can have multiple secondary groups.
+
+5.
+Which file controls sudo access?
+Answer: c) /etc/sudoers
+Explanation: /etc/sudoers defines which users or groups can execute commands with elevated privileges.
+
+Part B: True/False
+
+6.
+The passwd command can change another user's password if run with sudo.
+Answer: True
+
+7.
+Users can belong to multiple secondary groups.
+Answer: True
+
+8.
+Deleting a user with userdel automatically deletes their home directory.
+Answer: False
+Explanation: userdel -r username deletes home directory; without -r, it keeps the files.
+
+9.
+Service users are typically used for login purposes.
+Answer: False
+Explanation: Service users run system services, usually cannot log in interactively.
+
+10.
+The groups command shows both primary and secondary groups of a user.
+Answer: True
+
+Part C: Practical / Command Questions
+
+11.
+Write the command to add a new user called student with home directory /home/student.
+Answer: sudo useradd -m -d /home/student student
+
+12.
+Write the command to change the password for user professor.
+Answer: sudo passwd professor
+
+13.
+Write the command to add the user student to a group developers.
+Answer: sudo usermod -aG developers student
+
+14.
+How would you list all users on the system using a file command?
+Answer: cat /etc/passwd
+
+15.
+How do you check which groups the current user belongs to?
+Answer: groups or id
+
+Part D: Short Answer / Conceptual
+
+16.
+Explain the difference between primary and secondary groups.
+Answer: Primary group is the default group assigned to a user (GID in /etc/passwd), used for newly created files. Secondary groups are additional groups the user belongs to, giving extra permissions.
+
+17.
+Why is /etc/shadow more secure than /etc/passwd?
+Answer: /etc/shadow is readable only by root and stores encrypted passwords. /etc/passwd is world-readable and should not store actual passwords.
+
+18.
+Describe the purpose of sudo and when it should be used.
+Answer: sudo allows a permitted user to execute commands as another user, usually root, for administrative tasks. It is used to avoid logging in as root directly, improving security.
+
+19.
+Name one special type of user in Linux and its purpose.
+Answer: root – the superuser with full system privileges.
+Other examples: nobody (limited permissions), service users (www-data, mysql).
+
+20.
+What happens if you assign UID 0 to a non-root user?
+Answer: That user becomes equivalent to root, with full administrative privileges. This can compromise security.

@@ -1,0 +1,150 @@
+Linux Software Management Quiz
+Topics: Packages and repositories, dnf package manager, rpm commands
+
+Think of Linux software management like app stores for your phone, but with superpowers! Instead of one store, Linux has different "systems" depending on your distribution (distro).
+
+dnf command options:
+    sudo dnf install <package_name> --> dnf install chrome
+    sudo dnf remove <package_name>  --> dnf remove game 
+    sudo dnf update                 --> dnf uopdate
+    sudo dnf upgrade
+
+NGINX "engine-x - web server
+    sudo dnf install nginx      # Install it
+    sudo systemctl start nginx  # Start it
+    sudo systemctl enable nginx # Auto-start on boot
+    sudo systemctl status nginx # Check if running
+
+DNF vs RPM:
+    # DNF (SMART - handles dependencies automatically)
+        dnf install nginx
+        # DNF will: 1) Find nginx.rpm, 2) Find ALL dependency .rpms, 3) Install everything
+
+    # RPM (DUMB - just installs what you give it)
+        rpm -ivh nginx.rpm
+        # RPM will: 1) Install only nginx.rpm, 2) FAIL if dependencies missing
+
+
+---------------------------------
+Part A: Multiple Choice
+1. What is a software repository?
+    a) A local folder for backups
+    b) A remote or local collection of software packages
+    c) A running service
+    d) A system log file
+2. Which command updates all installed packages on a system?
+    a) dnf install
+    b) dnf refresh
+    c) dnf update
+    d) dnf upgrade-all
+3. Which dnf command shows installed packages?
+    a) dnf list
+    b) dnf list installed
+    c) dnf info
+    d) dnf history
+4. What does the command `dnf search nginx` do?
+    a) Installs nginx
+    b) Removes nginx
+    c) Searches repositories for nginx
+    d) Shows nginx configuration
+5. Which rpm command removes a package?
+    a) rpm -i
+    b) rpm -qf
+    c) rpm -e
+    d) rpm -u
+
+---------------------------------
+Part B: True / False
+6. dnf automatically resolves package dependencies.
+7. rpm can download packages from repositories.
+8. dnf history shows past install and remove actions.
+9. rpm -qf shows which package owns a file.
+10. Removing a package with rpm also removes its dependencies automatically.
+
+---------------------------------
+Part C: Practical / Command Questions
+11. Install the package httpd.
+12. Remove the package nano.
+13. Display detailed information about the package bash.
+14. Show the history of package management transactions.
+15. Find out which package owns the file /usr/bin/passwd.
+
+
+------------------------------------------------------------------
+Answer Key
+1. b) A remote or local collection of software packages
+Explanation:
+    A repository is a structured storage location (online or local) that contains software packages and metadata used by package managers like dnf.
+--------
+2. c) dnf update
+Explanation:
+    dnf update checks enabled repositories, resolves dependencies, and upgrades installed packages to newer versions.
+
+--------
+3. b) dnf list installed
+Explanation:
+    dnf list → all available packages
+    dnf list installed → only packages currently installed on the system
+
+--------
+4. c) Searches repositories for nginx
+Explanation:
+    This command searches enabled repositories for package names and descriptions that match the keyword nginx.
+
+--------
+5. c) rpm -e
+Explanation:
+    -i → install
+    -e → erase (remove)
+    -qf → query file owner
+
+--------
+6. True
+Explanation:
+    dnf installs required dependencies automatically, which is why it is preferred over raw rpm.
+
+--------
+7. False (rpm works with local packages only)
+Explanation:
+    rpm only works with local .rpm files. It does not fetch packages from repositories.
+
+--------
+8. True
+Explanation:
+    dnf history displays a transaction log including installs, removals, upgrades, and rollbacks.
+
+--------
+9. True
+Explanation:
+    rpm -qf /path/to/file tells you which installed package provided that file.
+
+--------
+10. False (rpm does not resolve dependencies)
+Explanation:
+Unlike dnf, rpm does not handle dependency resolution. It may break the system if used incorrectly.
+
+----------------    Part C: Practical / Command Questions ----------------
+11. sudo dnf install httpd
+Explanation:
+    Uses dnf to download the package from a repository and install it with dependencies.
+
+--------
+12. sudo dnf remove nano
+Explanation:
+    dnf remove safely removes the package and any unneeded dependencies.
+
+--------
+13. dnf info bash
+Explanation:
+    Shows version, repository, size, description, and installed status.
+
+--------
+14. dnf history
+Explanation:
+    Lists all dnf operations with transaction IDs, dates, and actions.
+
+--------
+15. rpm -qf /usr/bin/passwd
+Explanation:
+    This is a common troubleshooting command to identify which package installed a specific file.
+

@@ -1,0 +1,60 @@
+Linux Quiz – Topic 2
+Topic: File System Permissions, Default Permissions, and File Access
+---------
+
+----------------------------------------------------------------------
+Part A – Multiple Choice
+
+1. What does the permission string -rwxr-xrwx represent?  owner group owner
+A) A directory with full access for everyone
+B) A file where owner has rwx, group has r-x, others have rwx
+C) A file where owner has r--, group has r-x, others have rwx
+D) A file owned by root
+
+is this a file or a dir? - rw- rw- r-- 
+is this a file or a directory? d rwx rwx r-x
+is this a file or directory or a link? l rwx rwx rwx 
+
+------------------
+2. Which permission allows a user to run a file as a program?
+A) read
+B) write
+C) execute
+D) delete
+
+------------------
+3. Which number represents read permission? 4
+A) 1
+B) 2
+C) 4
+D) 7
+
+Which number represents write permission? 2
+Which number represents execute permission? 1
+------------------
+Part B – True / False
+4. The execute permission is required to enter a directory. F
+5. A file with permission rw-r--r-- can be modified by other users. F
+6. Permissions are divided into owner, group, and others.  T
+
+------------------
+Part C – Short Answer
+7. Explain what each part of the permission string -rwxr-xrwx means.
+    - is a file indicator
+8. What is the default permission for a new file (before umask is applied)? -rw-rw-r-- or 644
+9. What command is used to view file permissions?  ls -l (or ll) 
+
+------------------
+Part D – Practical Commands
+10. Change the permissions of a file named test.sh so that the owner has full access, the group has read and execute, and others have no access.
+rwx r-x ---
+4+2+1 4+0+1 000
+7 5 0
+111 101 000
+750
+
+chmod 750 test.sh
+
+11. Remove write permission from group and others on a file called data.txt.
+Part E – Challenge
+12. A file has permissions -rw-r----- . Who can read this file and who can modify it?

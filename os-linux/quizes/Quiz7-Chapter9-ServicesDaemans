@@ -1,0 +1,86 @@
+Quiz 5 - Chapter 9 Control Services and Damemons
+
+
+Section 9.1 / 9.2: Identify Automatically Started System Processes
+
+Which command shows all active system services on a Linux system?
+A) systemctl list-units
+B) ps aux
+C) top
+D) jobs
+
+Which command is used to start a service immediately?
+A) systemctl start service_name
+B) systemctl enable service_name
+C) service service_name status
+D) systemctl stop service_name
+
+Which command ensures a service starts automatically at boot?
+A) systemctl enable service_name
+B) systemctl start service_name
+C) systemctl status service_name
+D) systemctl disable service_name
+
+Which command stops a currently running service?
+A) systemctl stop service_name
+B) systemctl disable service_name
+C) systemctl start service_name
+D) systemctl enable service_name
+
+How can you check if a service is active and running?
+A) systemctl status service_name
+B) ps aux | grep service_name
+C) top
+D) jobs
+
+Section 9.3 / 9.4: Control System Services
+
+Which command prevents a service from starting at boot?
+A) systemctl disable service_name
+B) systemctl stop service_name
+C) systemctl mask service_name
+D) systemctl enable service_name
+
+What is the purpose of a daemon in Linux?
+A) A background process that runs continuously
+B) A text editor
+C) A foreground application
+D) A hardware device
+
+Which command shows all services currently loaded by systemd, regardless of state?
+A) systemctl list-unit-files
+B) systemctl start service_name
+C) systemctl stop service_name
+D) systemctl status service_name
+
+Section 9.5 / 9.6: Kill / Restart Services
+
+Which command restarts a running service?
+A) systemctl restart service_name
+B) systemctl reload service_name
+C) systemctl stop service_name
+D) systemctl status service_name
+
+True or False: 'systemctl mask service_name' completely prevents a service from being started manually or automatically.
+A) True
+B) False
+
+---------------------------
+Section 9.1 / 9.2: Identify Automatically Started System Processes
+
+systemctl list-units
+systemctl start service_name
+systemctl enable service_name
+systemctl stop service_name
+systemctl status service_name
+
+Section 9.3 / 9.4: Control System Services
+systemctl disable service_name
+A background process that runs continuously (daemon)
+systemctl list-unit-files
+Section 9.5 / 9.6: Kill / Restart Services
+systemctl restart service_name
+
+True (systemctl mask service_name prevents manual or automatic start)
+
+

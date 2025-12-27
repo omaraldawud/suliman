@@ -1,0 +1,50 @@
+1. What is the root directory in Linux? /
+2. Which directory contains system configuration files? /etc/
+3. Which directory usually stores user home directories? /home/
+4. True or False: All files and directories in Linux start from the root directory.
+5. Difference between absolute path and relative path?
+
+6. Example of an absolute path:? /home/omar/dev/Suliman
+7. Example of a relative path:?  dev/Suliman
+
+8. What do . and .. represent?
+    ./ current directory
+    ../ parent directory - one back 
+    ../../../..   4 back
+9. Command to copy files? cp
+10. Command to move or rename files? mv 
+11. command to remove a file? rm 
+12. Copy report.txt into a directory named junk? cp report.txt junk/.
+13. Command used to create links? ln 
+14. Difference between hard link and symbolic link? symbolic link is a pointer to the 
+15. Create a symbolic link named notes_link.txt pointing to notes.txt?
+16. What does * match?  eveything any number of chars
+17. What does ? match?  one char
+18. List all .tx.t files in the current directory?  ll *.txt
+19. List all files that start with the letter a? ll *a
+19.5 list all files that ends with a?  ll *a
+20. Remove all files ending with .log?  rm *.log
+------------------------------------------
+1.   ➡ /
+2.   ➡ /etc
+3.   ➡ /home
+4.   ➡ TRUE
+5.   ➡ Absolute path starts from /
+     ➡ Relative path starts from the current directory
+6.   ➡ /home/student/file.txt
+7.   ➡ docs/file.txt
+8.1. ➡ . = current directory
+     ➡ .. = parent directory
+9.   ➡ cp
+10.  ➡ mv
+11.  ➡ rm
+12.  ➡ cp report.txt backup/
+13.  ➡ ln
+14.  ➡ Hard link points to the same inode
+     ➡ Symbolic link points to the file name/path
+15.  ➡ ln -s notes.txt notes_link.txt
+16.  ➡ Zero or more characters
+17.  ➡ Exactly one character
+18.  ➡ ls *.txt
+19.  ➡ ls a*
+20.  ➡ rm *.log

@@ -1,0 +1,63 @@
+Linux Quiz – Topic 3
+Topic: Create, View, and Edit Text Files – Redirection (> and >>)
+1.  D) nano filename
+2.  C)
+3.  C) Overwrites file.txt with “Hello”
+4.  B) >>
+5. TRUE
+6. TRUE
+7. TRUE
+8. FALSE
+9. nano filename
+10. > overwrites the file
+    >> appends to the file
+11. touch notes.txt
+12. echo "Linux is fun" > notes.txt
+13. echo "I am learning Linux" >> notes.txt
+14. cat notes.txt
+15. Line 3
+
+------------------------------------------------------------------------------------------------
+Part A – Multiple Choice
+1. Which command is used to create an empty text file?
+    A) mkdir file.txt B) touch file.txt C) cat file.txt D) nano file.txt
+
+2. Which command displays the contents of a text file?
+    A) ls B) pwd C) cat D) rm
+
+3. What does the following command do?
+    echo "Hello" > file.txt
+    A) Appends text B) Deletes file C) Overwrites file D) Prints only
+
+4. Which symbol appends text to an existing file?
+    A) > B) >> C) < D) |
+
+----------
+Part B – True / False
+5. The > symbol overwrites the contents of a file.   T
+6. The >> symbol adds text to the end of a file.  T
+7. The cat command can be used to view a text file. T
+8. The nano command is only used to view files. F
+
+----------
+Part C – Short Answer
+9. Write the command used to edit a text file in the terminal.
+10. Explain the difference between > and >>.
+
+----------
+Part D – Practical Commands
+11. Create a file called notes.txt.
+12. Write the text "Linux is fun" into notes.txt (overwrite).
+13. Append the text "I am learning Linux" to notes.txt.
+14. Display the contents of notes.txt.
+
+----------
+Part E – Challenge
+15. What will be the contents of file.txt after running the following commands?
+echo "Line 1" > file.txt
+echo "Line 2" >> file.txt
+echo "Line 3" > file.txt
+echo "lolo" > file.txt
+
+
+

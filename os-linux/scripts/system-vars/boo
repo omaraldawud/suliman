@@ -1,0 +1,39 @@
+#!/bin/bash
+echo#!/bin/bash
+# This is a simple shell script
+
+echo "Hello, welcome to Linux!"
+echo "Today is: $(date)"
+echo "Your current directory is: $(pwd)"
+
+echo "What is your name?"
+read name
+echo "Nice to meet you, $name!"
+
+echo "Enter a number:"
+read num
+echo "The double of your number is $((num * 2))"
+
+
+
+echo "Files in current folder:"
+ls -l
+
+# Check if a file exists
+
+echo "Enter a file name:"
+read file
+
+
+if [ -f "$file" ]; then
+    echo "$file exists!"
+else
+    echo "$file does NOT exist."
+fi
+
+echo "Say Something:"
+read saySomething
+echo "$saySomething" > myfile.txt
+echo "Hello World" >> myfile.txt
+echo "You said: $(cat myfile.txt)"
+
