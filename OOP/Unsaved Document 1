@@ -1,0 +1,48 @@
+public class Car {
+
+    // Fields (attributes) - instant variables
+    private String make;
+    private String model;
+    private int year;
+    private String color;
+
+    // Default constructor
+    public Car() {
+        this.make = "unknown";
+        this.model = "unknown";
+        this.year = 0;          // 0 means unspecified
+        this.color = "unknown";
+    }
+
+    // Constructor with parameters
+    public Car(String make, String model, int year, String color) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+    }
+
+    // Getters
+    public String getMake() { return make; }
+    public String getModel() { return model; }
+    public int getYear() { return year; }
+    public String getColor() { return color; }
+
+    // Setters
+    public void setMake(String make) { this.make = make; }
+    public void setModel(String model) { this.model = model; }
+    public void setYear(int year) { this.year = year; }
+    public void setColor(String color) { this.color = color; }
+
+    // Method: compare two cars
+    public boolean isNewerThan(Car otherCar) {
+        return this.year > otherCar.getYear();
+    }
+
+    // toString
+    @Override
+    public String toString() {
+        return year + " " + color + " " + make + " " + model;
+    }
+}
+
