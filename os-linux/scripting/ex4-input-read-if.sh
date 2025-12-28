@@ -19,21 +19,16 @@ echo "The double of your number is $((num * 2))"
 echo "Files in current folder:"
 ls -l
 
-# Check if a file exists
-
+# read file name from user
 echo "Enter a file name:"
-read file
+read filename
 
-
-if [ -f "$file" ]; then
-    echo "$file exists!"
+# Check the type of the file
+if [ -f "$filename" ]; then
+    echo "$filename is a normal file (like .txt, .jpg, etc.)"
+elif [ -d "$filename" ]; then
+    echo "$filename is a directory/folder"
 else
-    echo "$file does NOT exist."
+    echo "$filename doesn't exist or is a special file"
 fi
-
-echo "Say Something:"
-read saySomething
-echo "$saySomething" > myfile.txt
-echo "Hello World" >> myfile.txt
-echo "You said: $(cat myfile.txt)"
 
