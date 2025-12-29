@@ -1,8 +1,10 @@
+Fundementals
+
 1. What is the root directory in Linux? /
 2. Which directory contains system configuration files? /etc/
 3. Which directory usually stores user home directories? /home/
 4. True or False: All files and directories in Linux start from the root directory.
-5. Difference between absolute path and relative path?
+5. Difference between absolute  path and relative path?
 
 6. Example of an absolute path:? /home/omar/dev/Suliman
 7. Example of a relative path:?  dev/Suliman
@@ -24,6 +26,8 @@
 19. List all files that start with the letter a? ll *a
 19.5 list all files that ends with a?  ll *a
 20. Remove all files ending with .log?  rm *.log
+
+
 ------------------------------------------
 1.   ➡ /
 2.   ➡ /etc

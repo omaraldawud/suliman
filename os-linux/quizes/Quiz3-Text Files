@@ -1,21 +1,5 @@
 Linux Quiz – Topic 3
 Topic: Create, View, and Edit Text Files – Redirection (> and >>)
-1.  D) nano filename
-2.  C)
-3.  C) Overwrites file.txt with “Hello”
-4.  B) >>
-5. TRUE
-6. TRUE
-7. TRUE
-8. FALSE
-9. nano filename
-10. > overwrites the file
-    >> appends to the file
-11. touch notes.txt
-12. echo "Linux is fun" > notes.txt
-13. echo "I am learning Linux" >> notes.txt
-14. cat notes.txt
-15. Line 3
 
 ------------------------------------------------------------------------------------------------
 Part A – Multiple Choice
@@ -58,6 +42,24 @@ echo "Line 1" > file.txt
 echo "Line 2" >> file.txt
 echo "Line 3" > file.txt
 echo "lolo" > file.txt
+
+----------------------------------------
+1.  D) nano filename
+2.  C)
+3.  C) Overwrites file.txt with “Hello”
+4.  B) >>
+5. TRUE
+6. TRUE
+7. TRUE
+8. FALSE
+9. nano filename
+10. > overwrites the file
+    >> appends to the file
+11. touch notes.txt
+12. echo "Linux is fun" > notes.txt
+13. echo "I am learning Linux" >> notes.txt
+14. cat notes.txt
+15. Line 3
 
 
 

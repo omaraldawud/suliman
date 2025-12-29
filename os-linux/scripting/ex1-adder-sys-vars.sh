@@ -3,6 +3,7 @@
 
 echo "=== Simple Number Adder ==="
 
+echo "Name of the script: $0"
 echo "1st Argument: $1"
 echo "2nd Argumnet: $2"
 echo "Number of arguments: $#"

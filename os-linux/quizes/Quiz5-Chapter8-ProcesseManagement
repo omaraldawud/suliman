@@ -1,12 +1,15 @@
-Quiz 4 — Monitor and Manage Linux Processes - Chapter 8
+Quiz 4 — Monitor and Manage Linux Processes - Chapter 12 Chapter 12 Process Management
+
+------------------------------------------------------------------------------------------------
 
 Section 8.1 / 8.2: Process States and Lifecycle
-What is a process in Linux?
-What command is commonly used to view running processes?
-Name two process states in Linux.
-True or False:
-        A process must always be running to exist.
-What is a PID?
+-------
+    What is a process in Linux?
+    What command is commonly used to view running processes?
+    Name two process states in Linux.
+    True or False:
+            A process must always be running to exist.
+    What is a PID?
 
 ...............
 Section 8.3 / 8.4: Control Jobs
@@ -17,27 +20,27 @@ What command brings a background job to the foreground?
 
 ...............
 Section 8.5 / 8.6: Kill Processes
-What command is used to send a signal to a process?
-What signal number is commonly used to force terminate a process?
-What command would you use to stop a process using its PID?
-True or False:
-A killed process can always clean up before exiting.
+    What command is used to send a signal to a process?
+    What signal number is commonly used to force terminate a process?
+    What command would you use to stop a process using its PID?
+    True or False:
+    A killed process can always clean up before exiting.
 
 Section 8.7 / 8.8: Monitor Process Activity
-What command provides a real-time view of system processes?
-Name two resources that top monitors.
-Which command shows process information in a snapshot (not real-time)?
+    What command provides a real-time view of system processes?
+    Name two resources that top monitors.
+    Which command shows process information in a snapshot (not real-time)?
 
 Section 8.9: Lab — Monitor and Manage Linux Processes
-Start a program named sleep 300 in the background.
-List all running processes for the current user.
-Identify the PID of a running process.
-Stop a running process using its PID.
+    Start a program named sleep 300 in the background.
+    List all running processes for the current user.
+    Identify the PID of a running process.
+    Stop a running process using its PID.
 
 Section 8.10: Summary
-In one sentence, explain the difference between:
-A job is a command launched from the shell that may run in the foreground or background, while 
-A process is the running instance of a program managed by the operating system.
+    In one sentence, explain the difference between:
+    A job is a command launched from the shell that may run in the foreground or background, while 
+    A process is the running instance of a program managed by the operating system.
 
 ----------------------------------------------------------
 Answers:
