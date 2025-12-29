@@ -1,0 +1,43 @@
+Find all files of user root that are in the directory /var
+and were modified within the last 24 hours
+
+ sudo find /var -user root -mtime -1
+
+Explanation:
+    sudo - run with superuser privileges (needed to access root-owned files)
+    find - the command to search for files
+    /var - the directory to search in
+    -user root - files owned by user "root"
+    -mtime -1 - files modified less than 1 day ago (within last 24 hours)
+    This will list all files in /var owned by root that were modified within the last 24 hours.
+
+---------------------------------------------
+Find all files in /var/log that are larger than 512KiB and
+write that list to a file “big.list” in your home directory
+
+        find /var/log -type f -size +512k > ~/big.list
+
+Explanation:
+    find /var/log - search in the /var/log directory
+    -type f - look for regular files (not directories)
+    -size +512k - files larger than 512 kilobytes
+    > - redirect the output
+    ~/big.list - to the file big.list in your home directory
+
+The list of matching files will be saved to big.list in your home directory.
+---------------------------------------------
+Find all files in /opt/share larger then 2MB and copy
+them to your homefolder?
+
+        find /opt/share -type f -size +2M -exec cp {} ~ \;
+
+Explanation:
+    find /opt/share - search in the /opt/share directory
+    -type f - look for regular files (not directories)
+    -size +2M - files larger than 2 megabytes
+    -exec cp {} ~ \; - execute the cp command for each found file, where {} is replaced with the filename, and copy it to the home directory (~)
+
+This will copy all files larger than 2MB from /opt/share to your home folder.
+
+
+
