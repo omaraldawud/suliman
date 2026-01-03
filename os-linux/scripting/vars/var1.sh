@@ -4,11 +4,19 @@
 # You can put a number in a variable, but it will then be a String
 # If you want to perform calculations with these numbers, use the following syntax (only works with integers!):
 
-var=1
-echo "Initial value: $var"
-echo $((var+1))
-echo "After adding 2: $((var+2))"
-var=$((var+4))
+
+#
+echo "----------------- version 2 ----------------------"
+mkdir "My Documents"
+var="My Documents"
+ls ${var}
+ls: cannot access 'My': No such file or directory
+ls: cannot access 'Documents': No such file or directory
+ls "${var}"
+touch "${var}/document"
+ls "${var}"
+
+
 
 
 
