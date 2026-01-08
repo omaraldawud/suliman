@@ -1,20 +1,22 @@
 #!/bin/bash
 
 name="Omar"
+lname="aldawud"
 course="Linux"
 
 # “Bash reads the line → expands variables → runs the command.”
 
------------------------------------------
-# basic variable 
+# b-----------------------------------------
+#basic variable 
 # “Expansion happens before the command executes.”
 echo $name                  #   WSL: Open Folder in WSL$name → expanded by bash
-echo $course                #   echo never sees $name, it sees the value
+echo ${course}                #   echo never sees $name, it sees the value
 
------------------------------------------
+#  echo $nameM.$lname
+# -----------------------------------------
 #
 echo '$name'    # → no expansion
-echo "$name"    # → allows expansion
+echo "${name}"    # → allows expansion
 
 #  -----------------------------------------
 # Positional Parameter Expansion

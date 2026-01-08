@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# read a number from the user and print backwards all numbers between 0 and the read number.
+#
+
+
 # Ask for input
 read -p "Enter a number: " num
 
@@ -8,6 +12,13 @@ echo "------------- using for -------------"
 for (( i=num; i>=1; i-- )); do
     echo "${i}"
 done
+
+# print from 0 the read number
+#
+for (( i=0; i>=num; i++ )); do
+    echo "${i}"
+done
+
 
 read -p "Enter a number: " num
 echo "------------- using while -------------"
