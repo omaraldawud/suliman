@@ -17,11 +17,13 @@ Part A: Multiple Choice
     b) whoami
     c) groups
     d) passwd
+
 3. Which command is used to switch to another user?
     a) sudo
     b) su
     c) switch
     d) login
+
 4. The primary group of a user is:
     a) The group with GID 0
     b) The group defined in /etc/passwd
@@ -43,8 +45,9 @@ Part B: True / False
 10. The groups command shows both primary and secondary groups of a user.
 
 --------------------
-Part C: Practical / Command Questions11. Add a new user called student with home directory /home/student.
-12. Change the password for user professor.
+Part C: Practical / Command Questions11. 
+11. Add a new user called student with home directory /home/student. useradd student /home/student
+12. Change the password for user professor.    
 13. Add user student to group developers.
 14. List all users on the system using a file command.
 15. Show which groups the current user belongs to.
